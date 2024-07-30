@@ -1,7 +1,7 @@
 {
   "name": "job_portal",
   "version": "1.0.0",
-  "description": "Website Link :- https://yuvraj-woc.onrender.com/",
+  "description": "Website Link :- ",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yuvraj049/woc5.0-node-jobportal-Yuvraj.git"
+    "url": "git+https://github.com/error-path/SRI_Project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yuvraj049/woc5.0-node-jobportal-Yuvraj/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/Yuvraj049/woc5.0-node-jobportal-Yuvraj#readme",
+  "homepage": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
