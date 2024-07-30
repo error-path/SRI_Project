@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+@media all  and (min-width:458px) and (max-width:972px){
+    .Boxes{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media all and (max-width:457px){
+    .Boxes{
+        display: flex;
+        flex-direction: column;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 200px;
+        margin: 50px;
+    }
+}
+body{
+    background: linear-gradient(to right, #3c9792, #93bc2a); 
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-align: center;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb
+}
+h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    color: rgb(3, 27, 160);
+}
+.Boxes{
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 400px;
+    margin: 50px;
+   
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    transition-property: width height;
+    transition-timing-function: ease-in-out;
+}
+.box:hover{
+    width: 400px;
+    height: 420px;
+    transition-duration: 0.4s;
+    transition-property: width height;
+    transition-timing-function: ease-in-out;
+    
+}
+a{
+    text-decoration: none;
+}
+.box span{
+    padding: 10px;
+    font-size: 25px;
+    border: 4px solid black;
+    color: black;
+    border-radius: 7px;
+    font-weight: 700;
+    opacity: 0.8;
+    
+}
+#box_1{
+    background: url("../img/student_image_2.jpg") center center/cover no-repeat;;
+}
+#box_2{
+    background: url("../img/company_image_2.png") center center/cover no-repeat;;
+    
+}
+.Boxes h1{
+    position: relative;
+    top: 10px;
+    font-size: 32px;
+    color: rgb(3, 27, 160);
+}

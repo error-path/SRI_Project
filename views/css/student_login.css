@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        #8b51ff,
+        #7a37ff
+    );
+}
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-align: center;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb
+}
+.alert-dismissible {
+    padding-right: 4rem
+}
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear
+}
+
+.fade.show {
+    opacity: 1
+}
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .75rem 1.25rem;
+    color: inherit
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.formerror{
+    color: red;
+    margin-bottom: 10px;
+  }
+form{
+    background-color: #ffffff;
+    width: 450px;
+    padding: 50px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.15);
+}
+label{
+    font-weight: 500;
+    color: #101030;
+}
+input{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    outline: none;
+    color: #101010;
+    border-radius: 10px;
+}
+.password{
+    margin-top: 5px;
+}
+#email1,#password1{
+    border: 2px solid #c2c2c2;
+}
+input[type="submit"]{
+    background-color: #7f3fff;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+.already_signed{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: large;
+    
+  }
+.already_signed a{
+    text-decoration: none;
+    
+  }
+@media all  and (min-width:466px) and (max-width:784px){
+    form{
+        width: 350px;
+    }
+    input{
+        width: 100%; 
+    }
+}
+@media all and (max-width:465px){
+    form{
+        width: 300px;
+    }
+    input{
+        width: 100%; 
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Update Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="/static/css/student_signup.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <% if (message) { %>
+        <div class="alert alert-danger" role="alert">
+            <strong><%=message%></strong>
+          </div>
+      <% } %>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Student Update Form</h2>
+                    <form name="form1" onsubmit="return validateForm()" action="/edit_student/<%=user_info._id%>" method="POST">
+                        <input type="hidden" value="<%=user_info._id%>" name="_id">
+                        <input type="hidden" value="<%=user_info.gender%>" name="gender">
+                        <div class="one_line">
+                            <div class="input-group" id="name">
+                                <input id="fullname" class="input--style-1" value="<%=user_info.name%>" type="text" placeholder="Full Name" name="name">
+                                <label for="fullname">Full Name</label><br>
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            <div class="input-group-col2" id="email">
+                                <input id="email" class="input--style-1" value="<%=user_info.email%>" type="email" placeholder="Email" name="email">
+                                <label  for="email">Email</label><br>
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                        </div>
+                        
+                        <div class="one_line">
+                            <div class="input-group" id="age">
+                                <input id="age" class="input--style-1" value="<%=user_info.age%>" type="number" placeholder="Age" name="age">
+                                <label  for="email">Age</label><br>
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            <div class="input-group-col2" id="batch">
+                                <input id="batch" class="input--style-1" value="<%=user_info.batch%>" type="number" placeholder="Batch" name="batch">
+                                <label  for="batch">Batch</label><br>
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="one_line">
+                            
+                            <div class="input-group" id="cpi">
+                                <input id="cpi" class="input--style-1" value="<%=user_info.cpi%>" type="step=0.001" placeholder="CPI" name="cpi">
+                                <label  for="CPI">CPI</label><br>
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            <div class="input-group-col2" id="techstack">
+                                <input id="techstack" class="input--style-1" value="<%=user_info.techstack%>" type="text" placeholder="TechStack" name="techstack">
+                                <label  for="techstack">TechStack</label><br>
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                        </div>
+                        <div class="p-t-20">
+                            <button  class="btn btn--radius btn--green" type="submit">Update Profile</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- JavaScript -->
+    <script src="/static/js/student_signup.js"></script>
+</body>
+</html>

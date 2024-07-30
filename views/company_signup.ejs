@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/company_signup.css">
+</head>
+<body>
+    <% if (message) { %>
+        <div class="alert alert-danger" role="alert">
+            <strong><%=message%></strong>
+          </div>
+      <% } %>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Company Registration Form</h2>
+                    <form name="form1" onsubmit="return validateForm()" method="POST" action="/company_signup_register">
+                        <div class="one_line">
+                            <!-- id for form validaton -->
+                            <div class="input-group" id="name"> 
+                                <input class="input--style-1" type="text" placeholder="Company Name" name="name">
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            <div class="input-group-col2" id="email">
+                                <input class="input--style-1" type="email" placeholder="Company Email" name="email">
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                        </div>
+                        <div class="one_line">
+                            <div class="input-group" id="post">
+                                <input class="input--style-1"  style="width:300px; margin-right:-10px;" type="text" placeholder="Post available" name="post">
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            <div class="input-group" style="margin-right:0px;" id="cpi">
+                                <input class="input--style-3"  type="step=0.001" placeholder="Minimum CPI" name="req_cpi">
+                                <b><br><span class="formerror"></span></b>
+                            </div>
+                            <div class="input-group-col2" id="package">
+                                <input class="input--style-1" type="text" placeholder="Package for the post" name="package">
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                        </div>
+                        <div class="one_line"> 
+                        </div>
+                        <div class="input-group" id="website">
+                            <input class="input--style-2" type="text" placeholder="Official Website" name="website">
+                            <b><span class="formerror"><br></span></b>
+                        </div>
+                        <div class="input-group" id="description">
+                            <input class="input--style-2" type="text" placeholder="Description about the company" name="description">
+                            <b><span class="formerror"><br></span></b>
+                        </div>
+                        <div class="input-group" id="address">
+                            <input class="input--style-2" type="text" placeholder="Address of the Company" name="address">
+                            <b><span class="formerror"><br></span></b>
+                       </div>
+                        <div class="one_line">
+                            <div class="input-group" id="password">
+                                <input class="input--style-1" type="password" placeholder="Password" name="password">
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                            <div class="input-group-col2" id="confirmpassword">
+                                <input class="input--style-1" type="password" placeholder="Confirm Password" name="confirmpassword">
+                                <b><span class="formerror"><br></span></b>
+                            </div>
+                        </div>
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <div class="already_signed">
+                        Already registered?<a href="/company_login">&nbsp;&nbsp;login here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- JavaScript -->
+    <script src="/static/js/company_signup.js"></script>
+</body>
+</html>

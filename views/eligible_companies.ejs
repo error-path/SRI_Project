@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Eligible Companies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/static/css/company_profile.css">
+    
+</head>
+<body>
+		
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>Company Profiles</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<% for(let i=0 ; i<comp_data.length ;i++){ %>
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+<div class="student-profile py-4" style="margin-bottom: 80px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center" >
+            <img class="profile_img" src="/static/img/company_image.jpg" alt="student dp">
+            <h3></h3>
+          </div>
+          <div class="card-body" >
+            <p class="mb-0" ><strong class="pr-1">Name:</strong><%=comp_data[i].name%></p>
+            <p class="mb-0"><strong class="pr-1">Website:</strong><a target="_blank" href="<%=comp_data[i].website%>"><%=comp_data[i].website%></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i><%=i+1%>.&nbsp;&nbsp;Company</h3>
+          </div>
+          <div class="card-body pt-0" style="margin-top: 10px; margin-bottom: 4px;">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">E-mail</th>
+                <td width="2%">:</td>
+                <td><%=comp_data[i].email%></td>
+              </tr>
+              <tr>
+                <th width="30%">Position Vacant</th>
+                <td width="2%">:</td>
+                <td><%=comp_data[i].position_required%></td>
+              </tr>
+              <tr>
+                <th width="30%">Required Minimum CPI</th>
+                <td width="2%">:</td>
+                <td><%=comp_data[i].required_cpi%></td>
+              </tr>
+              <tr>
+                <th width="30%">Package Offered</th>
+                <td width="2%">:</td>
+                <td><%=comp_data[i].package%></td>
+              </tr>
+              <tr>
+                <th width="30%">Company Address</th>
+                <td width="2%">:</td>
+                <td><%=comp_data[i].address%></td>
+              </tr>
+              <tr>
+                <th width="30%">Description</th>
+                <td width="2%">:</td>
+                <td><%=comp_data[i].description%></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<%}%>     
+    		</div>
+		</div>
+    </div>
+</section>
+
+</script>
+	</body>
+</html>
+
